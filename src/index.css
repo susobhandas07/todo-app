@@ -1,0 +1,64 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@400;700&display=swap');
+:root {
+  font-family: 'Josefin Sans', sans-serif;
+  font-weight: 400;
+
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+
+  --background-img:url('./assets/bg-mobile-dark.jpg');
+  --background:hsl(235, 21%, 11%);
+  --list-background:hsl(235, 24%, 19%);
+  --text:hsl(234, 39%, 85%);
+  --hover:hsl(236, 33%, 92%);
+  --checked-background:linear-gradient(90deg,hsl(192, 100%, 67%), hsl(280, 87%, 65%));
+  --options:hsl(234, 11%, 52%);
+  --dashboard-text: hsl(233, 14%, 35%);
+  --checked: hsl(237, 14%, 26%);
+  --checked-option:hsl(220, 98%, 61%);
+}
+*{
+  box-sizing: border-box;
+}
+body{
+  background-color:var(--background);
+  background-image:var(--background-img);
+  background-repeat: no-repeat;
+  color:var(--text);
+  background-size:contain;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+
+}
+#root{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-height:90vh;
+}
+:root:has(#light:checked){
+  --background-img:url('./assets/bg-mobile-light.jpg');
+  --background:hsl(236, 33%, 92%);
+  --list-background:hsl(0, 0%, 98%);
+  --text:hsl(235, 19%, 35%);
+  --hover:hsl(236, 33%, 92%);
+  --dashboard-text:hsl(234, 11%, 52%);
+  --options: hsl(233, 14%, 35%);
+  --checked: hsl(233, 11%, 84%);
+}
+@media(min-width:769px){
+  :root{
+    --background-img:url('./assets/bg-desktop-dark.jpg');
+  }
+  :root:has(#light:checked){
+    --background-img:url('./assets/bg-desktop-light.jpg');
+  }
+  #root{
+    width:750px;
+    margin-inline:auto;
+  }
+}

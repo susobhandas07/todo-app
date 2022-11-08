@@ -1,0 +1,100 @@
+.container{
+    margin-inline:0.8rem;
+}
+.listElement{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    display: flex;
+    align-items: center;
+}
+#inputField{
+    width:100%;
+    padding-top:1rem;
+    padding-bottom:1rem;
+    text-indent:2.2rem;
+    border-radius: 0.4em;
+    border:none;
+    background: var(--list-background);
+    color: var(--checked-and-input);
+}
+#inputField:focus{
+    outline:none;
+}
+#jobList{
+    background-color:var(--list-background);
+    list-style-type:none;
+    margin-top:1rem;
+    border-radius: 0.4em;
+    color:var(--text);
+}
+.task{
+    -webkit-appearance: none;
+    appearance: none;
+    width:2.2em;
+    height:2.2em;
+    border-radius: 50% !important;
+    outline:1px solid var(--options);
+    outline-offset: 5px;
+    margin-right:2rem;
+    padding:0.3rem;
+    margin-left:-1rem;
+}
+.task:hover{
+    cursor: pointer;
+}
+.task:checked{
+    background: var(--checked-background);
+    content:url('./assets/icon-check.svg');
+}
+.task:checked ~ .taskLabel{
+    text-decoration: line-through;
+    color:var(--checked);
+}
+.taskLabel{
+    margin-right:auto;
+}
+.delete{
+    margin-right:1rem;
+    background:transparent;
+    border:none;
+}
+.delete:hover{
+    cursor: pointer;
+}
+#dashBoard{
+    padding-top:1rem;
+    padding-bottom:1rem;
+    padding-inline:1rem;
+    display: flex;
+    justify-content: space-between;
+    margin-left:-2rem;
+    color:var(--dashboard-text);
+}
+#clear-complete{
+    background-color: transparent;
+    border:none;
+    color:var(--options);
+    font-family: inherit;
+    font-size:inherit;
+}
+#actions{
+    display: flex;
+    justify-content: space-around;
+    background: var(--list-background);
+    padding-top:1rem;
+    padding-bottom:1rem;
+    border-radius: 0.4rem;
+    color:var(--options);
+}
+.action{
+    -webkit-appearance: none;   
+    appearance: none;
+    background:transparent;
+    border:none;
+}
+.view-options:hover{
+    cursor:pointer;
+}
+#all:checked ~ .view-options:nth-of-type(1),#active:checked ~ .view-options:nth-of-type(2),#completed:checked ~ .view-options:nth-of-type(3){
+    color:var(--checked-option);
+}
